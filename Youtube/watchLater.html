@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watch Later</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./watchLater.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header data-theme="default" class="mode">
+      <nav>
+        <div>
+          <div><i class="fa-solid fa-bars"></i></div>
+          <div>
+            <i class="fa-brands fa-youtube"></i>
+            <span onclick="redirect()">YouTube</span>
+          </div>
+        </div>
+        <div>
+          <input type="text" id="search_input" oninput="debounce(main, 150)" />
+          <div id="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div id="suggestionBox"></div>
+        </div>
+        <div>
+          <div><i class="fa-solid fa-clapperboard"></i></div>
+          <div><i class="fa-solid fa-bars-progress"></i></div>
+          <div><i class="fa-solid fa-bell"></i></div>
+          <div>
+            <img
+              src="https://bit.ly/3y4xBRh"
+              alt="profile"
+              onclick="toggle()"
+            />
+            <label for="toggler">
+              <input type="checkbox" id="toggler" />
+              <span>Dark/Light Mode</span>
+            </label>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main data-theme="default" class="mode">
+      <aside>
+        <section>
+          <div>
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </div>
+          <div>
+            <i class="fa-solid fa-compass"></i>
+            <span>Explore</span>
+          </div>
+          <div>
+            <i class="fa-solid fa-play"></i>
+            <span>Shorts</span>
+          </div>
+          <div>
+            <i class="fa-solid fa-circle-play"></i>
+            <span>Subscription</span>
+          </div>
+        </section>
+        <hr />
+        <section>
+          <div>
+            <i class="fa-solid fa-lines-leaning"></i>
+            <span>Library</span>
+          </div>
+          <div>
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span>History</span>
+          </div>
+          <div>
+            <i class="fa-solid fa-camera-rotate"></i>
+            <span>Your Videos</span>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-stopwatch"></i>
+            <span>Watch Later</span>
+          </div>
+          <div>
+            <i class="fa-solid fa-thumbs-up"></i>
+            <span>Liked videos</span>
+          </div>
+        </section>
+      </aside>
+      <section id="wrapper" data-theme="default" class="mode">
+        <div id="left">
+          <div id="top">
+            <img src="" alt="display_banner" id="banner-display" />
+            <p>Play Video</p>
+          </div>
+          <div id="bottom">
+            <h1>Watch later</h1>
+          </div>
+        </div>
+        <div id="right">
+          <div id="above">
+            <div>
+              <i class="fa-solid fa-arrow-down-wide-short"></i>
+            </div>
+            <select id="sorting" data-theme="default" class="mode">
+              <option value="">Sort</option>
+              <option value="newest">Date added (newest)</option>
+              <option value="oldest">Date added (oldest)</option>
+            </select>
+          </div>
+          <div id="down-container">
+            <!-- JS CODES GOES HERE -->
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+<script src="./watchLater.js"></script>
+<script src="./suggestions.js"></script>

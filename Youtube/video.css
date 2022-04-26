@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;0,900;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root,
+[data-theme="dark"] {
+  --body-bg-color: #000000;
+  --textColor: #fff;
+  --searchColor: #505055;
+  --border-line: 1.5px solid #f8f8f8;
+  --textBgcColorised: #fff;
+  --trendP: #000;
+  --bgcContainer: #333333;
+}
+
+[data-theme="default"] {
+  --body-bg-color: #ffffff;
+  --border-line: 1.5px solid #aaa;
+  --box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  --suggestionBox: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --text-bgc: #f2f2f2;
+  --textBgcColorised: #505050;
+  --textColor: #fff;
+  --bgcContainer: #f2f2f2;
+  --textColor: #000;
+  --searchColor: #f8f8f8;
+  --trendP: #ffff;
+}
+
+nav {
+  position: relative;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  font-size: 1.5rem;
+  box-shadow: var(--box-shadow);
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: var(--body-bg-color);
+  color: var(--textColor);
+}
+nav h1 {
+  cursor: pointer;
+}
+nav i {
+  color: red;
+}
+
+main {
+  font-family: "Noto Sans", sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  background-color: var(--body-bg-color);
+  color: var(--textColor);
+  display: flex;
+  justify-content: center;
+}
+
+main #container {
+  width: 70%;
+  border-radius: 1.1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: var(--border-line);
+}
+
+#container iframe {
+  border: unset;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 1.1rem;
+  border-top-right-radius: 1.1rem;
+}
+
+#container > div:nth-child(1) {
+  height: 450px;
+}
+
+#container > h3 {
+  padding: 2rem 1.4rem;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+#container > div:nth-child(3) {
+  padding: 2rem 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+}
+#container h3 {
+  font-size: 1.3rem;
+}
+#container p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+button {
+  border: unset;
+  padding: 1rem 2rem;
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d60404;
+}
+
+label {
+  position: absolute;
+  left: 90%;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
